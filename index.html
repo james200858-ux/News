@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>[단독] 메타, 인스타그램 '스토리 누가 봤나' 유료화 전환 - 글로벌 테크 인사이더</title>
+    <style>
+        /* 기본 스타일 및 폰트 설정 */
+        body {
+            font-family: 'Noto Sans KR', 'Malgun Gothic', sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            background-color: #f9f9f9;
+        }
+        a { text-decoration: none; color: inherit; }
+        
+        /* 헤더 (네비게이션) */
+        header {
+            background-color: #fff;
+            border-bottom: 2px solid #0056b3;
+            padding: 15px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo {
+            font-size: 24px;
+            font-weight: 900;
+            color: #0056b3;
+            letter-spacing: -1px;
+        }
+        .nav-links {
+            font-size: 14px;
+            font-weight: bold;
+            color: #555;
+        }
+        .nav-links span { margin-left: 15px; cursor: pointer; }
+        .nav-links .active { color: #0056b3; }
+
+        /* 메인 레이아웃 */
+        .container {
+            max-width: 1000px;
+            margin: 30px auto;
+            display: flex;
+            gap: 30px;
+            padding: 0 20px;
+        }
+        
+        /* 기사 본문 영역 */
+        .article-section {
+            flex: 3;
+            background: #fff;
+            padding: 40px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.05);
+            border-top: 4px solid #333;
+        }
+        .category {
+            font-size: 13px;
+            color: #0056b3;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        .headline {
+            font-size: 32px;
+            line-height: 1.4;
+            margin: 0 0 15px 0;
+            word-break: keep-all;
+        }
+        .sub-headline {
+            font-size: 18px;
+            color: #666;
+            margin-bottom: 20px;
+            line-height: 1.5;
+        }
+        .reporter-info {
+            font-size: 13px;
+            color: #888;
+            border-top: 1px solid #eee;
+            border-bottom: 1px solid #eee;
+            padding: 10px 0;
+            margin-bottom: 30px;
+            display: flex;
+            justify-content: space-between;
+        }
+        .content {
+            font-size: 17px;
+            line-height: 1.8;
+            color: #222;
+        }
+        .content p { margin-bottom: 20px; }
+        .fake-image-box {
+            width: 100%;
+            background-color: #eaeaea;
+            height: 300px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #888;
+            font-size: 14px;
+            margin: 30px 0 10px 0;
+            border: 1px solid #ddd;
+        }
+        .image-caption {
+            font-size: 12px;
+            color: #888;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        /* 사이드바 영역 */
+        .sidebar {
+            flex: 1;
+        }
+        .sidebar-title {
+            font-size: 16px;
+            font-weight: bold;
+            border-bottom: 2px solid #333;
+            padding-bottom: 10px;
+            margin-bottom: 15px;
+        }
+        .top-news {
+            list-style: none;
+            padding: 0;
+            margin: 0 0 30px 0;
+        }
+        .top-news li {
+            font-size: 14px;
+            line-height: 1.5;
+            margin-bottom: 12px;
+            border-bottom: 1px dashed #ddd;
+            padding-bottom: 12px;
+        }
+        .top-news li:hover { color: #0056b3; cursor: pointer; text-decoration: underline; }
+        .ad-banner {
+            background-color: #ffeaa7;
+            padding: 20px;
+            text-align: center;
+            font-weight: bold;
+            color: #d63031;
+            border: 1px solid #fdcb6e;
+        }
+
+        /* 푸터 */
+        footer {
+            background-color: #333;
+            color: #aaa;
+            text-align: center;
+            padding: 30px;
+            font-size: 12px;
+            line-height: 1.6;
+            margin-top: 50px;
+        }
+
+        /* 모바일 반응형 */
+        @media (max-width: 768px) {
+            .container { flex-direction: column; }
+            .article-section { padding: 20px; }
+            .headline { font-size: 24px; }
+            .nav-links span { display: none; }
+            .nav-links .active { display: inline; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">GLOBAL TECH INSIDER</div>
+        <div class="nav-links">
+            <span>홈</span>
+            <span>정치</span>
+            <span>경제</span>
+            <span class="active">IT/비즈</span>
+            <span>사회</span>
+            <span>세계</span>
+        </div>
+    </header>
+
+    <div class="container">
+        <main class="article-section">
+            <div class="category">IT/비즈니스 > 소셜미디어</div>
+            <h1 class="headline">[단독] 메타, 인스타그램 '스토리 누가 봤나' 유료화 전환... 월 5,900원 '프리미엄 방문자 팩' 도입 확정</h1>
+            <h2 class="sub-headline">내년 하반기부터 전 세계 순차 적용... 일반 사용자는 '방문자 목록' 확인 불가<br>무분별한 '계정 염탐' 차단 및 수익 다각화 포석... 사용자 반발 예상</h2>
+            
+            <div class="reporter-info">
+                <span>김진우 테크 전문 기자 (tech_reporter@gti.news)</span>
+                <span>입력 2024.04.10 10:30 | 수정 2024.04.10 11:15</span>
+            </div>
+
+            <div class="content">
+                <p>메타(Meta)가 운영하는 사진 및 동영상 공유 플랫폼 인스타그램(Instagram)이 이용자들의 가장 큰 관심을 끌었던 '스토리 방문자 목록' 확인 기능을 유료로 전환한다.</p>
+                <p>본지가 9일(현지 시간) 미국 실리콘밸리 메타 본사의 내부 사정에 정통한 복수의 관계자를 통해 단독 입수한 문건에 따르면, 인스타그램은 <b>'프리미엄 방문자 팩(Premium Visitor Pack)'</b>이라는 새로운 구독 모델을 내년 하반기부터 도입하기로 최종 확정했다.</p>
+                
+                <div class="fake-image-box">
+                    [인스타그램 프리미엄 방문자 팩 결제 안내 유출 화면]
+                </div>
+                <div class="image-caption">메타 내부 문건에 포함된 '프리미엄 방문자 팩' 기능 도입 예정 화면 모형. / 출처=글로벌 테크 인사이더 단독 입수</div>
+
+                <p>해당 구독 서비스의 핵심 내용은 다음과 같다. 일반 사용자는 기존과 동일하게 스토리를 올리고 친구들의 스토리를 볼 수 있지만, <b>자신의 스토리를 누가 보았는지(방문자 목록)는 더 이상 확인할 수 없게 된다.</b> 대신 월 예상 구독료 5,900원(한국 기준)을 지불하는 구독자에 한해 실시간 방문자 목록을 제공하며, 추가로 '내 프로필에 가장 많이 방문한 사용자 분석 리포트'까지 제공받게 된다.</p>
+                <p>메타가 이러한 결정을 내린 배경에는 두 가지 주된 이유가 있는 것으로 분석된다. 첫째, 사용자들의 무분별한 '계정 염탐' 행위를 차단하여 개인정보 보호를 강화한다는 명분이다. 둘째, 최근 광고 수익 감소로 인한 빅테크 기업들의 수익 구조 다각화 흐름에 맞춘 행보라는 평이다. 이미 유튜브 프리미엄이나 X(구 트위터) 프리미엄과 같이 IT 기업들의 유료 구독 서비스가 보편화되는 추세에 따른 것이다.</p>
+                <p>그러나 이러한 인스타그램의 행보는 적지 않은 파장을 일으킬 것으로 예상된다. '스토리 방문자 확인'은 사용자들이 인스타그램을 이용하는 가장 큰 재미 요소 중 하나이기 때문이다. 국내외 소셜 미디어 커뮤니티에서는 "이제 마음 놓고 남의 스토리를 볼 수 있어서 좋다"는 긍정적인 반응과 "필수 기능을 인질로 돈을 번다"는 부정적인 반응이 팽팽하게 맞서고 있다. 특히 청소년층 사용자들을 중심으로 큰 반발이 예상된다.</p>
+                <p>메타 관계자는 "아직 공식적인 발표 단계는 아니지만, 다양한 수익 모델을 검토 중인 것은 사실"이라며 말을 아꼈다. 해당 기능은 내년 하반기 미국, 한국 등 주요 국가를 시작으로 전 세계에 순차적으로 적용될 예정이다.</p>
+            </div>
+        </main>
+
+        <aside class="sidebar">
+            <div class="sidebar-title">많이 본 뉴스</div>
+            <ul class="top-news">
+                <li>1. 애플, 아이폰16에 역대급 AI 기능 탑재 예고</li>
+                <li>2. 넷플릭스, 계정 공유 단속 이후 가입자 폭증</li>
+                <li>3. <b>[단독] 메타, 인스타그램 '스토리 누가 봤나' 유료화 전환...</b></li>
+                <li>4. 테슬라, 사이버트럭 결함 논란에 전량 리콜 검토</li>
+                <li>5. 카카오톡, 내년부터 '안 읽은 메시지' 강제 삭제 논란</li>
+            </ul>
+
+            <div class="ad-banner">
+                [광고]<br><br>GTI 뉴스레터 구독하고<br>스타벅스 쿠폰 받으세요!
+            </div>
+        </aside>
+    </div>
+
+    <footer>
+        (주)글로벌테크인사이더 | 등록번호: 서울 아-00000 | 등록일: 2024.01.01<br>
+        발행인/편집인: 김진우 | 청소년보호책임자: 이수진<br>
+        Copyright ⓒ Global Tech Insider. All rights reserved.<br>
+        본 기사는 사회문제탐구 수행평가 실험을 위해 제작된 <b>가짜 뉴스(Fake News)</b>입니다.
+    </footer>
+
+</body>
+</html>
