@@ -92,13 +92,77 @@
         }
         .content p { margin-bottom: 20px; text-align: justify; }
 
-        /* 기사 이미지 영역 스타일 */
-        .content img {
+        /* 🔥 코드 자체로 만든 가짜 인스타그램 팝업 디자인 (이미지 깨짐 절대 방지) 🔥 */
+        .ig-mockup-container {
             width: 100%;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            height: 400px;
+            background: linear-gradient(135deg, #111, #333); /* 어두운 배경 */
+            border-radius: 12px;
+            position: relative;
             margin: 30px 0 10px 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            overflow: hidden;
         }
+        .ig-mockup-container::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" opacity="0.05"><circle cx="50" cy="50" r="40" fill="white"/></svg>') repeat;
+            filter: blur(2px);
+        }
+        .ig-popup {
+            background: #fff;
+            width: 280px;
+            border-radius: 16px;
+            padding: 24px 20px;
+            text-align: center;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            position: relative;
+            z-index: 2;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+        }
+        .ig-popup-icon {
+            font-size: 32px;
+            margin-bottom: 15px;
+        }
+        .ig-popup-title {
+            font-size: 18px;
+            font-weight: 700;
+            color: #000;
+            margin: 0 0 10px 0;
+            letter-spacing: -0.5px;
+        }
+        .ig-popup-desc {
+            font-size: 14px;
+            color: #737373;
+            line-height: 1.4;
+            margin-bottom: 20px;
+            word-break: keep-all;
+        }
+        .ig-btn-pay {
+            background-color: #0095f6;
+            color: #fff;
+            border: none;
+            border-radius: 8px;
+            padding: 12px 0;
+            width: 100%;
+            font-size: 14px;
+            font-weight: 600;
+            cursor: pointer;
+            margin-bottom: 10px;
+        }
+        .ig-btn-cancel {
+            background: transparent;
+            color: #000;
+            border: none;
+            font-size: 14px;
+            font-weight: 600;
+            cursor: pointer;
+        }
+
         .image-caption {
             font-size: 12px;
             color: #888;
@@ -108,49 +172,27 @@
         }
 
         /* 사이드바 영역 */
-        .sidebar {
-            flex: 1;
-        }
+        .sidebar { flex: 1; }
         .sidebar-title {
-            font-size: 16px;
-            font-weight: bold;
+            font-size: 16px; font-weight: bold;
             border-bottom: 2px solid #333;
-            padding-bottom: 10px;
-            margin-bottom: 15px;
+            padding-bottom: 10px; margin-bottom: 15px;
         }
-        .top-news {
-            list-style: none;
-            padding: 0;
-            margin: 0 0 30px 0;
-        }
+        .top-news { list-style: none; padding: 0; margin: 0 0 30px 0; }
         .top-news li {
-            font-size: 14px;
-            line-height: 1.5;
-            margin-bottom: 12px;
-            border-bottom: 1px dashed #ddd;
-            padding-bottom: 12px;
+            font-size: 14px; line-height: 1.5; margin-bottom: 12px;
+            border-bottom: 1px dashed #ddd; padding-bottom: 12px;
         }
         .top-news li span { color: #0056b3; font-weight: bold; margin-right: 5px; }
-        .top-news li:hover { color: #0056b3; cursor: pointer; text-decoration: underline; }
         .ad-banner {
-            background-color: #ffeaa7;
-            padding: 20px;
-            text-align: center;
-            font-weight: bold;
-            color: #d63031;
-            border: 1px solid #fdcb6e;
-            font-size: 14px;
+            background-color: #ffeaa7; padding: 20px; text-align: center;
+            font-weight: bold; color: #d63031; border: 1px solid #fdcb6e; font-size: 14px;
         }
 
         /* 푸터 */
         footer {
-            background-color: #333;
-            color: #aaa;
-            text-align: center;
-            padding: 30px;
-            font-size: 12px;
-            line-height: 1.6;
-            margin-top: 50px;
+            background-color: #333; color: #aaa; text-align: center;
+            padding: 30px; font-size: 12px; line-height: 1.6; margin-top: 50px;
         }
 
         /* 모바일 반응형 */
@@ -195,20 +237,24 @@
                 
                 <p>본지가 9일(현지 시간) 미국 실리콘밸리 메타 본사의 내부 사정에 정통한 복수의 관계자를 통해 단독 입수한 프로젝트 문건에 따르면, 인스타그램은 <b>'프리미엄 방문자 팩(Premium Visitor Pack)'</b>이라는 새로운 구독 모델을 내년 하반기부터 도입하기로 최종 확정하고 현재 세부 인터페이스 테스트를 진행 중인 것으로 확인되었다.</p>
                 
-                <img src="fake_news_image.png" alt="[인스타그램 프리미엄 스토리 방문자 확인 도입 유출 화면]">
-                <div class="image-caption">메타 내부 문건에 포함된 '프리미엄 방문자 팩' 기능 도입 예정 화면 모형. 일반 사용자는 자신의 스토리를 누가 보았는지 확인하려면 구독이 필요하다는 내용의 충격적인 팝업을 보여준다. / 출처=글로벌 테크 인사이더 단독 입수</div>
+                <div class="ig-mockup-container">
+                    <div class="ig-popup">
+                        <div class="ig-popup-icon">🔒</div>
+                        <h3 class="ig-popup-title">방문자 확인 잠김</h3>
+                        <p class="ig-popup-desc">스토리를 누가 보았는지 확인하려면<br>프리미엄 방문자 팩 구독이 필요합니다.</p>
+                        <button class="ig-btn-pay">월 5,900원 결제하기</button>
+                        <button class="ig-btn-cancel">나중에 하기</button>
+                    </div>
+                </div>
+                <div class="image-caption">메타 내부 문건에 포함된 '프리미엄 방문자 팩' 기능 도입 예정 화면 모형. 스토리를 열람할 때 방문자 목록 대신 결제 유도 팝업이 뜬다. / 출처=글로벌 테크 인사이더 단독 입수</div>
 
                 <p>이번에 유출된 내부 문건의 핵심은 기존 무료로 제공되던 정보의 '블라인드 처리'다. 도입 이후 일반 사용자는 스토리를 업로드하더라도 전체 '조회수(숫자)'만 확인할 수 있을 뿐, 구체적으로 어떤 계정이 내 스토리를 열람했는지 그 목록은 비공개 처리된다. 해당 목록을 기존처럼 실시간으로 확인하려면 월 5,900원(한국 기준 예상가)의 구독료를 지불해야만 한다.</p>
 
                 <p>프리미엄 구독자에게는 단순한 방문자 목록 복원 외에도 강력한 부가 기능이 제공될 전망이다. 문건에 따르면 '내 프로필을 가장 자주 확인한 사용자 톱(Top) 10 순위', '비공개 계정 방문자 일부 식별 힌트', 그리고 '최근 6개월간의 스토리 누적 방문자 데이터 분석 리포트' 등이 포함된다. 이는 사실상 타인의 관심을 확인하고 싶어 하는 사용자들의 심리와 '인정 욕구'를 정조준한 수익 모델인 셈이다.</p>
-
-                <p>IT 업계는 이러한 메타의 결정이 예견된 수순이었다고 평가한다. 한국테크미디어연구소의 최진환 수석연구원은 "최근 애플의 개인정보 보호 정책 강화로 타겟형 광고 효율이 급감하면서, 글로벌 빅테크 기업들이 B2B(기업 간 거래) 광고 수익 중심에서 B2C(소비자 대상) 직접 구독 모델로 체질을 개선하고 있다"고 설명했다. 그는 이어 "인스타그램 사용자들에게 가장 민감하고 수요가 확실한 기능인 '방문자 확인'을 유료화하는 것은 메타 입장에서 가장 즉각적이고 확실한 캐시카우(수익 창출원)가 될 것"이라고 분석했다.</p>
                 
-                <p>그러나 이러한 인스타그램의 파격적인 행보는 적지 않은 파장과 반발을 일으킬 것으로 예상된다. 24시간 후 사라지는 스토리는 게시물(피드)에 비해 가볍게 일상을 공유하는 용도로 쓰이며, 특히 1020 세대에게는 '누가 내 글을 읽었는지' 확인하는 것이 앱을 실행하는 가장 큰 재미 요소 중 하나이기 때문이다.</p>
-
-                <p>소식이 알려지자마자 국내외 소셜 미디어 커뮤니티에서는 격렬한 논쟁이 불붙고 있다. 일부 사용자는 "이제 남의 스토리를 흔적 없이 염탐할 수 되어 오히려 좋다"는 반응을 보였으나, 대다수는 "사용자들의 본능적인 소통 욕구를 인질로 삼아 돈을 번다", "기본 기능을 돈 받고 파는 얄팍한 상술"이라며 강도 높게 비판하고 있다. 일각에서는 틱톡(TikTok)이나 엑스(X) 등 대체 플랫폼으로의 대규모 이탈 가능성마저 제기되는 상황이다.</p>
+                <p>IT 업계는 이러한 메타의 결정이 예견된 수순이었다고 평가한다. IT 전문가들은 "최근 개인정보 보호 정책 강화로 글로벌 빅테크 기업들이 B2B 광고 수익 중심에서 직접 구독 모델로 체질을 개선하고 있다"며 "사용자들에게 가장 수요가 확실한 기능을 유료화하는 것은 즉각적인 캐시카우가 될 것"이라고 분석했다.</p>
                 
-                <p>이와 관련해 메타 코리아 관계자는 "글로벌 본사 차원에서 사용자 경험 개선과 새로운 수익 모델 발굴을 위해 다양한 테스트를 진행 중인 것은 맞지만, 아직 특정 기능의 유료화 여부나 출시 일정이 공식적으로 발표된 바는 없다"며 말을 아꼈다. 업계는 해당 기능이 내년 3분기 북미 지역을 시작으로 한국을 포함한 글로벌 전역에 순차적으로 적용될 것으로 내다보고 있다.</p>
+                <p>소식이 알려지자마자 1020 세대를 중심으로 소셜 미디어 커뮤니티에서는 격렬한 논쟁이 불붙고 있다. 대다수 사용자는 "기본적인 소통 기능을 돈 받고 파는 얄팍한 상술"이라며 강도 높게 비판하고 있으며, 일각에서는 틱톡 등 다른 플랫폼으로의 대규모 이탈 가능성마저 제기되고 있다. 해당 기능은 내년 하반기 한국을 포함한 글로벌 전역에 순차적으로 적용될 것으로 보인다.</p>
             </div>
         </main>
 
